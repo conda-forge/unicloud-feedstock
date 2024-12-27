@@ -1,5 +1,5 @@
 {% set name = "unicloud" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Serapieum-of-alex/unicloud/archive/{{ version }}.tar.gz
-  sha256: fa490821dc3809f8e7bf0d7972e954830fed3c6f6bb839eb91384b295af3a64d
+  sha256: d5fa1e0618bd01b0e99eee19bdafc6735eaa8665caf1db710324c9f4875c12dc
 
 build:
   noarch: python
