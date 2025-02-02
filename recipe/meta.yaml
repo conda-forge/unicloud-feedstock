@@ -1,3 +1,4 @@
+{% set python_min = '3.12' %}
 {% set name = "unicloud" %}
 {% set version = "0.4.0" %}
 
@@ -12,15 +13,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.12
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.9.0
   run:
-    - python >=3.12
+    - python >={{ python_min }}
     - loguru >=0.7.2
     - numpy >=2.1.2
     - pandas >=2.2.0
@@ -33,6 +34,7 @@ test:
     - unicloud
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
