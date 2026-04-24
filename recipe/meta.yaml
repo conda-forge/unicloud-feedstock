@@ -1,6 +1,6 @@
-{% set python_min = '3.12' %}
+{% set python_min = "3.12" %}
 {% set name = "unicloud" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://github.com/Serapieum-of-alex/unicloud/archive/{{ version }}.tar.gz
-  sha256: d5fa1e0618bd01b0e99eee19bdafc6735eaa8665caf1db710324c9f4875c12dc
+  sha256: 8eb1138fe50999548aaf07da2d5d002bc907846df79098b470ede67bac09bcfb
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
